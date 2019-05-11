@@ -1,1 +1,1 @@
-gunicorn Try-Django-2.2.wsgi --log-file -
+gunicorn fib-django.wsgi --log-file -
