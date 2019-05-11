@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+{% if title %}
+    <h1>{{ title }}</h1>
+{% endif %}
+
+<form method='POST' action='.' enctype='multipart/form-data'> {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'>Send</button>
+</form> 
+<br>
+
+{% if content_display %}
+    <p><b>Fibonacci Value:</b> {{ content_display }}</p>
+    <p><b>Time Taken:</b> {{ time_taken }} secs</p>
+{% endif %}
+
+{% endblock %}
